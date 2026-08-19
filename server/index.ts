@@ -2,6 +2,7 @@ import express, { Request, Response, NextFunction } from 'express';
 import dotenv from 'dotenv';
 import path from 'path';
 import fs from 'fs';
+import { fileURLToPath } from 'url';
 import { authRouter } from './routes/auth';
 import { customerRouter } from './routes/customers';
 import { menuRouter } from './routes/menu';
@@ -18,6 +19,9 @@ import { reportRouter } from './routes/reports';
 import { db } from './db';
 
 dotenv.config();
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -79,23 +83,34 @@ app.use('/api/v1/settings', settingsRouter);
 app.use('/api/v1/reports', reportRouter);
 
 // 404 Handler for undefined API routes
-app.use('/api/*', (req: Request, res: Response) => {
+app.all('/api/*', (req: Request, res: Response) => {
   res.status(404).json({
     success: false,
     message: `API endpoint ${req.method} ${req.originalUrl} not found`
   });
 });
 
-// Serve frontend in production (Single Unified Full-Stack Service on Render)
-const distPath = path.join(process.cwd(), 'dist');
-if (fs.existsSync(distPath)) {
-  app.use(express.static(distPath));
-  app.get('*', (req: Request, res: Response) => {
-    if (!req.originalUrl.startsWith('/api')) {
-      res.sendFile(path.join(distPath, 'index.html'));
-    }
-  });
-}
+// Serve frontend static files in production (Render Fullstack)
+const distPath = path.resolve(__dirname, '../dist');
+app.use(express.static(distPath));
+
+// Catch-all for SPA React Router navigation
+app.get('*', (req: Request, res: Response) => {
+  const indexPath = path.join(distPath, 'index.html');
+  if (fs.existsSync(indexPath)) {
+    return res.sendFile(indexPath);
+  }
+  return res.send(`
+    <!DOCTYPE html>
+    <html lang="en">
+      <head><title>Homly Food API Server</title></head>
+      <body style="font-family: sans-serif; text-align: center; padding: 50px;">
+        <h2>🍲 Homly Food API Server is Active</h2>
+        <p>API endpoints are live at <a href="/api/v1/health">/api/v1/health</a></p>
+      </body>
+    </html>
+  `);
+});
 
 // Global Error Handler
 app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
