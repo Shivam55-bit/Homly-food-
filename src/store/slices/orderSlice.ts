@@ -84,6 +84,20 @@ export const updateOrderStatus = createAsyncThunk(
   }
 );
 
+export const editOrder = createAsyncThunk(
+  'orders/editOrder',
+  async ({ id, updates }: { id: string; updates: Partial<Order> }) => {
+    return await orderService.updateOrder(id, updates);
+  }
+);
+
+export const deleteOrder = createAsyncThunk(
+  'orders/deleteOrder',
+  async (id: string) => {
+    return await orderService.deleteOrder(id);
+  }
+);
+
 const orderSlice = createSlice({
   name: 'orders',
   initialState,
@@ -178,6 +192,22 @@ const orderSlice = createSlice({
         if (userIndex !== -1) state.userOrders[userIndex] = action.payload;
         if (state.activeTrackingOrder?.id === action.payload.id) {
           state.activeTrackingOrder = action.payload;
+        }
+      })
+      .addCase(editOrder.fulfilled, (state, action) => {
+        const index = state.orders.findIndex(o => o.id === action.payload.id);
+        if (index !== -1) state.orders[index] = action.payload;
+        const userIndex = state.userOrders.findIndex(o => o.id === action.payload.id);
+        if (userIndex !== -1) state.userOrders[userIndex] = action.payload;
+        if (state.activeTrackingOrder?.id === action.payload.id) {
+          state.activeTrackingOrder = action.payload;
+        }
+      })
+      .addCase(deleteOrder.fulfilled, (state, action) => {
+        state.orders = state.orders.filter(o => o.id !== action.payload);
+        state.userOrders = state.userOrders.filter(o => o.id !== action.payload);
+        if (state.activeTrackingOrder?.id === action.payload) {
+          state.activeTrackingOrder = state.orders[0] || null;
         }
       });
   }

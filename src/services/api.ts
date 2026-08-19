@@ -614,6 +614,34 @@ export const orderService = {
       console.warn('Backend assignRider fallback:', err);
     }
     return orderService.updateOrderStatus(orderId, 'out_for_delivery', riderId);
+  },
+
+  updateOrder: async (id: string, updates: Partial<Order>): Promise<Order> => {
+    try {
+      const res = await apiClient.put(`/orders/${id}`, updates);
+      if (res.data.data) return res.data.data;
+    } catch (err) {
+      console.warn('Backend updateOrder fallback:', err);
+    }
+    const orders = getStorageData<Order[]>(STORAGE_KEYS.ORDERS, INITIAL_ORDERS);
+    const index = orders.findIndex(o => o.id === id);
+    if (index === -1) throw new Error('Order not found');
+    const updated = { ...orders[index], ...updates };
+    orders[index] = updated;
+    setStorageData(STORAGE_KEYS.ORDERS, orders);
+    return updated;
+  },
+
+  deleteOrder: async (id: string): Promise<string> => {
+    try {
+      await apiClient.delete(`/orders/${id}`);
+    } catch (err) {
+      console.warn('Backend deleteOrder fallback:', err);
+    }
+    const orders = getStorageData<Order[]>(STORAGE_KEYS.ORDERS, INITIAL_ORDERS);
+    const filtered = orders.filter(o => o.id !== id);
+    setStorageData(STORAGE_KEYS.ORDERS, filtered);
+    return id;
   }
 };
 
