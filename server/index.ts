@@ -1,5 +1,7 @@
 import express, { Request, Response, NextFunction } from 'express';
 import dotenv from 'dotenv';
+import path from 'path';
+import fs from 'fs';
 import { authRouter } from './routes/auth';
 import { customerRouter } from './routes/customers';
 import { menuRouter } from './routes/menu';
@@ -60,7 +62,7 @@ app.get('/api/v1/health', (_req: Request, res: Response) => {
   });
 });
 
-// Mount Routes
+// Mount API Routes
 app.use('/api/v1/auth', authRouter);
 app.use('/api/v1/customers', customerRouter);
 app.use('/api/v1/menu', menuRouter);
@@ -84,6 +86,17 @@ app.use('/api/*', (req: Request, res: Response) => {
   });
 });
 
+// Serve frontend in production (Single Unified Full-Stack Service on Render)
+const distPath = path.join(process.cwd(), 'dist');
+if (fs.existsSync(distPath)) {
+  app.use(express.static(distPath));
+  app.get('*', (req: Request, res: Response) => {
+    if (!req.originalUrl.startsWith('/api')) {
+      res.sendFile(path.join(distPath, 'index.html'));
+    }
+  });
+}
+
 // Global Error Handler
 app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
   console.error('Unhandled Server Error:', err);
@@ -97,7 +110,7 @@ app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
 if (process.env.NODE_ENV !== 'test') {
   app.listen(PORT, () => {
     console.log(`====================================================`);
-    console.log(`🚀 Homly Food Backend API Server running on port ${PORT}`);
+    console.log(`🚀 Homly Food Full-Stack App running on port ${PORT}`);
     console.log(`👉 Health Check: http://localhost:${PORT}/api/v1/health`);
     console.log(`👉 Base API URL: http://localhost:${PORT}/api/v1`);
     console.log(`====================================================`);
