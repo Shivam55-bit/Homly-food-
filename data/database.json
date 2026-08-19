@@ -1,0 +1,1313 @@
+{
+  "users": [
+    {
+      "id": "usr-1",
+      "name": "Aarav Sharma",
+      "email": "aarav.sharma@example.com",
+      "phone": "+91 98765 43210",
+      "role": "customer",
+      "avatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=150&q=80",
+      "dietaryPreference": "veg",
+      "walletBalance": 450,
+      "createdAt": "2025-01-10T10:00:00Z",
+      "addresses": [
+        {
+          "id": "addr-1",
+          "label": "Home",
+          "street": "Flat 402, Sunshine Residency, 14th Main",
+          "area": "Indiranagar",
+          "city": "Bangalore",
+          "pincode": "560038",
+          "landmark": "Near Metro Station Pillar 104",
+          "isDefault": true
+        },
+        {
+          "id": "addr-2",
+          "label": "Work",
+          "street": "Tower B, 5th Floor, EcoSpace Tech Park",
+          "area": "Bellandur",
+          "city": "Bangalore",
+          "pincode": "560103",
+          "landmark": "Near Gate 2",
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "id": "usr-vendor-1",
+      "name": "Rajesh Sharma (Sharma Ji Rasoi)",
+      "email": "sharmaji.kitchen@example.com",
+      "phone": "+91 98111 22334",
+      "role": "vendor",
+      "kitchenName": "Sharma Ji Shuddh Desi Rasoi",
+      "vendorId": "ven-1",
+      "avatar": "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=150&q=80",
+      "walletBalance": 14200,
+      "createdAt": "2025-02-15T09:00:00Z"
+    },
+    {
+      "id": "usr-admin",
+      "name": "Homly Master Admin",
+      "email": "admin@homlyfood.com",
+      "phone": "+91 91234 56789",
+      "role": "admin",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80",
+      "createdAt": "2024-11-01T08:00:00Z"
+    }
+  ],
+  "vendors": [
+    {
+      "id": "ven-1",
+      "userId": "usr-vendor-1",
+      "kitchenName": "Sharma Ji Shuddh Desi Rasoi",
+      "ownerName": "Rajesh Sharma",
+      "phone": "+91 98111 22334",
+      "email": "sharmaji.kitchen@example.com",
+      "address": "Plot 45, 2nd Cross, CMH Road, Indiranagar",
+      "area": "Indiranagar",
+      "city": "Bangalore",
+      "fssaiLicense": "FSSAI-2026-1100234",
+      "status": "active",
+      "rating": 4.92,
+      "totalOrdersCompleted": 1420,
+      "activeSubscribers": 45,
+      "todaysEarnings": 3850,
+      "totalEarnings": 142000,
+      "commissionPercentage": 10,
+      "speciality": [
+        "North Indian Pure Ghee Thali",
+        "Jain Satvik Rasoi",
+        "Rajma Chawal"
+      ],
+      "createdAt": "2025-02-15T09:00:00Z"
+    },
+    {
+      "id": "ven-2",
+      "userId": "usr-vendor-2",
+      "kitchenName": "Annapurna Maharashtrian & Gujarati Mess",
+      "ownerName": "Sunita Deshmukh",
+      "phone": "+91 98222 44556",
+      "email": "annapurna.tiffin@example.com",
+      "address": "14/B, 8th Main, Malleshwaram",
+      "area": "Malleshwaram",
+      "city": "Bangalore",
+      "fssaiLicense": "FSSAI-2026-1100889",
+      "status": "active",
+      "rating": 4.88,
+      "totalOrdersCompleted": 980,
+      "activeSubscribers": 32,
+      "todaysEarnings": 2640,
+      "totalEarnings": 98000,
+      "commissionPercentage": 10,
+      "speciality": [
+        "Poha & Upma Breakfast",
+        "Gujarati Kadhi Khichdi",
+        "Bhakri & Pithla"
+      ],
+      "createdAt": "2025-03-01T10:00:00Z"
+    },
+    {
+      "id": "ven-3",
+      "userId": "usr-vendor-3",
+      "kitchenName": "Dhaba Express Punjabi Kitchen",
+      "ownerName": "Harpreet Singh",
+      "phone": "+91 98333 77889",
+      "email": "dhabaexpress.kitchen@example.com",
+      "address": "88, 4th Block, Koramangala",
+      "area": "Koramangala",
+      "city": "Bangalore",
+      "fssaiLicense": "FSSAI-2026-1100551",
+      "status": "active",
+      "rating": 4.95,
+      "totalOrdersCompleted": 2150,
+      "activeSubscribers": 58,
+      "todaysEarnings": 5200,
+      "totalEarnings": 215000,
+      "commissionPercentage": 10,
+      "speciality": [
+        "High Protein Chicken Bowl",
+        "Dal Makhani & Naan",
+        "Egg Curry Paratha"
+      ],
+      "createdAt": "2025-01-20T11:00:00Z"
+    }
+  ],
+  "menu": [
+    {
+      "id": "menu-1",
+      "name": "Royal North Indian Thali",
+      "description": "Fresh Paneer Butter Masala, Slow-cooked Dal Makhani, 3 Soft Ghee Phulkas, Jeera Rice, Cucumber Raita, Gulab Jamun & Crisp Salad.",
+      "mealType": "lunch",
+      "dietaryType": "veg",
+      "price": 160,
+      "image": "https://images.unsplash.com/photo-1613292443284-8d10ef9383fe?auto=format&fit=crop&w=600&q=80",
+      "calories": 680,
+      "protein": "22g",
+      "carbs": "85g",
+      "fat": "18g",
+      "isSpecial": true,
+      "dayOfWeek": "Monday",
+      "itemsIncluded": [
+        "Paneer Butter Masala",
+        "Dal Makhani",
+        "3 Ghee Phulkas",
+        "Jeera Basmati Rice",
+        "Boondi Raita",
+        "Gulab Jamun"
+      ],
+      "rating": 4.9,
+      "reviewsCount": 320,
+      "available": true
+    },
+    {
+      "id": "menu-2",
+      "name": "Homestyle South Indian Feast",
+      "description": "Traditional Sambar, Mysore Rasam, Cabbage Poriyal, 2 Steamed Rice Bowls, Curd, Appalam & Moong Dal Payasam.",
+      "mealType": "lunch",
+      "dietaryType": "veg",
+      "price": 140,
+      "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=600&q=80",
+      "calories": 590,
+      "protein": "16g",
+      "carbs": "92g",
+      "fat": "11g",
+      "isSpecial": false,
+      "dayOfWeek": "Monday",
+      "itemsIncluded": [
+        "Drumstick Sambar",
+        "Tomato Pepper Rasam",
+        "Cabbage Poriyal",
+        "Steamed Ponni Rice",
+        "Curd",
+        "Crispy Appalam"
+      ],
+      "rating": 4.8,
+      "reviewsCount": 195,
+      "available": true
+    },
+    {
+      "id": "menu-3",
+      "name": "High Protein Chicken Bowl Thali",
+      "description": "Tender Homestyle Chicken Curry, Yellow Moong Dal Tadka, 3 Multigrain Rotis, Brown Rice, Sprouted Salad & Mint Chaas.",
+      "mealType": "lunch",
+      "dietaryType": "non-veg",
+      "price": 195,
+      "image": "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?auto=format&fit=crop&w=600&q=80",
+      "calories": 640,
+      "protein": "38g",
+      "carbs": "60g",
+      "fat": "15g",
+      "isSpecial": true,
+      "dayOfWeek": "Monday",
+      "itemsIncluded": [
+        "Dhaba Style Chicken Curry (200g)",
+        "Yellow Moong Dal",
+        "3 Multigrain Rotis",
+        "Steamed Brown Rice",
+        "Protein Salad",
+        "Chaas"
+      ],
+      "rating": 4.95,
+      "reviewsCount": 450,
+      "available": true
+    },
+    {
+      "id": "menu-4",
+      "name": "Jain Satvik Special Thali",
+      "description": "No onion no garlic special. Kadai Paneer, Gujarati Kadi, Moong Sukha, 3 Soft Phulkas, Rice, Cucumber Salad & Kheer.",
+      "mealType": "dinner",
+      "dietaryType": "jain",
+      "price": 155,
+      "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=80",
+      "calories": 610,
+      "protein": "19g",
+      "carbs": "80g",
+      "fat": "14g",
+      "isSpecial": false,
+      "dayOfWeek": "Monday",
+      "itemsIncluded": [
+        "Jain Kadai Paneer",
+        "Gujarati Sweet Kadhi",
+        "Moong Dal Sukha",
+        "3 Soft Phulkas",
+        "Jeera Rice",
+        "Rice Kheer"
+      ],
+      "rating": 4.85,
+      "reviewsCount": 140,
+      "available": true
+    },
+    {
+      "id": "menu-5",
+      "name": "Healthy Breakfast Poha & Sprouts Combo",
+      "description": "Steaming Indori Poha loaded with roasted peanuts & sev, boiled sprout salad, coconut chutney & 200ml freshly brewed Filter Coffee.",
+      "mealType": "breakfast",
+      "dietaryType": "veg",
+      "price": 90,
+      "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=600&q=80",
+      "calories": 390,
+      "protein": "12g",
+      "carbs": "58g",
+      "fat": "8g",
+      "isSpecial": true,
+      "dayOfWeek": "Monday",
+      "itemsIncluded": [
+        "Indori Kanda Poha (300g)",
+        "Protein Sprout Salad",
+        "Coconut Chutney",
+        "Filter Coffee / Tea flask"
+      ],
+      "rating": 4.9,
+      "reviewsCount": 280,
+      "available": true
+    },
+    {
+      "id": "menu-6",
+      "name": "Fluffy Idli-Vada Breakfast Platter",
+      "description": "3 Melt-in-mouth Steamed Idlis, 1 Crispy Medu Vada, aromatic Bangalore Sambar, Coconut Chutney & Tomato Chutney.",
+      "mealType": "breakfast",
+      "dietaryType": "veg",
+      "price": 95,
+      "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=80",
+      "calories": 420,
+      "protein": "14g",
+      "carbs": "65g",
+      "fat": "10g",
+      "isSpecial": false,
+      "dayOfWeek": "Tuesday",
+      "itemsIncluded": [
+        "3 Steamed Rice Idlis",
+        "1 Golden Medu Vada",
+        "Hot Drumstick Sambar",
+        "Trio of Chutneys"
+      ],
+      "rating": 4.92,
+      "reviewsCount": 310,
+      "available": true
+    },
+    {
+      "id": "menu-7",
+      "name": "Punjabi Rajma Chawal & Aloo Gobi Dinner",
+      "description": "Overnight simmered Jammu Rajma Masala, Steamed Basmati Rice, Dry Homestyle Aloo Gobi, 2 Tawa Rotis, Onion rings & Pickle.",
+      "mealType": "dinner",
+      "dietaryType": "veg",
+      "price": 150,
+      "image": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80",
+      "calories": 630,
+      "protein": "20g",
+      "carbs": "88g",
+      "fat": "13g",
+      "isSpecial": true,
+      "dayOfWeek": "Tuesday",
+      "itemsIncluded": [
+        "Jammu Rajma Curry",
+        "Jeera Basmati Rice",
+        "Homestyle Aloo Gobi",
+        "2 Tawa Rotis",
+        "Sirka Onion Salad"
+      ],
+      "rating": 4.88,
+      "reviewsCount": 410,
+      "available": true
+    },
+    {
+      "id": "menu-8",
+      "name": "Egg Curry & Ghee Paratha Dinner",
+      "description": "2 Boiled Eggs in rich onion-tomato gravy, 2 flaky layered Ghee Parathas, Jeera Rice, Cucumber Raita & Fresh Cut Fruits.",
+      "mealType": "dinner",
+      "dietaryType": "non-veg",
+      "price": 170,
+      "image": "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=600&q=80",
+      "calories": 650,
+      "protein": "28g",
+      "carbs": "64g",
+      "fat": "19g",
+      "isSpecial": false,
+      "dayOfWeek": "Wednesday",
+      "itemsIncluded": [
+        "2 Egg Homestyle Curry",
+        "2 Multi-layered Ghee Parathas",
+        "Steamed Rice",
+        "Kachumber Raita",
+        "Cut Fruit Bowl"
+      ],
+      "rating": 4.89,
+      "reviewsCount": 220,
+      "available": true
+    }
+  ],
+  "plans": [
+    {
+      "id": "plan-monthly-veg",
+      "name": "Monthly Saver Thali Plan",
+      "type": "monthly",
+      "durationDays": 30,
+      "price": 3600,
+      "originalPrice": 4800,
+      "discountPercentage": 25,
+      "description": "Best choice for working professionals. 30 Days of fresh, healthy hot meals delivered on time.",
+      "mealsIncluded": [
+        "lunch"
+      ],
+      "dietaryType": "veg",
+      "benefits": [
+        "Save ₹1200 every month",
+        "Free doorstep delivery daily",
+        "Up to 8 days pause delivery with 1-click credit rollover",
+        "Weekend sweet or dessert complimentary",
+        "Customize meal items 12h in advance",
+        "Zero cancellation charges for unused days"
+      ],
+      "isPopular": true,
+      "canPause": true,
+      "maxPauseDays": 8
+    },
+    {
+      "id": "plan-weekly-combo",
+      "name": "7-Day Weekly Trial Plan",
+      "type": "weekly",
+      "durationDays": 7,
+      "price": 950,
+      "originalPrice": 1120,
+      "discountPercentage": 15,
+      "description": "Perfect for trying our chef specials. Experience the taste and punctuality before committing long term.",
+      "mealsIncluded": [
+        "lunch"
+      ],
+      "dietaryType": "veg",
+      "benefits": [
+        "7 Days of rotating regional menu",
+        "Includes 2 weekend chef specials",
+        "Up to 2 days flexible delivery pause",
+        "Eco-friendly insulated hot tiffin packaging",
+        "100% money-back guarantee on Day 1 if not satisfied"
+      ],
+      "isPopular": false,
+      "canPause": true,
+      "maxPauseDays": 2
+    },
+    {
+      "id": "plan-dual-monthly",
+      "name": "Executive Lunch + Dinner Plan",
+      "type": "monthly",
+      "durationDays": 30,
+      "price": 6800,
+      "originalPrice": 9600,
+      "discountPercentage": 29,
+      "description": "Complete daily nutrition taken care of. Hot Lunch at office + Warm comforting Dinner at home.",
+      "mealsIncluded": [
+        "lunch",
+        "dinner"
+      ],
+      "dietaryType": "veg",
+      "benefits": [
+        "Dual address delivery (Work for Lunch & Home for Dinner)",
+        "High protein, balanced macro options included",
+        "Up to 10 days flexible pause rollover",
+        "Priority delivery slot guarantee (+/- 10 mins)",
+        "Free Sunday Special Dessert & Beverage"
+      ],
+      "isPopular": true,
+      "canPause": true,
+      "maxPauseDays": 10
+    },
+    {
+      "id": "plan-custom",
+      "name": "Custom Flexible Meal Pass",
+      "type": "custom",
+      "durationDays": 15,
+      "price": 2100,
+      "originalPrice": 2400,
+      "discountPercentage": 12,
+      "description": "Tailor your own tiffin schedule. Choose exact days, meal slots (Breakfast/Lunch/Dinner), and dietary preference.",
+      "mealsIncluded": [
+        "breakfast",
+        "lunch",
+        "dinner"
+      ],
+      "dietaryType": "veg",
+      "benefits": [
+        "Choose your own dates and meal slots",
+        "Unlimited pause & resume flexibility",
+        "Switch between Veg, Non-Veg, or Jain anytime",
+        "Roll over unused meals for up to 60 days"
+      ],
+      "isPopular": false,
+      "canPause": true,
+      "maxPauseDays": 15
+    }
+  ],
+  "subscriptions": [
+    {
+      "id": "sub-101",
+      "userId": "usr-1",
+      "customerName": "Aarav Sharma",
+      "customerPhone": "+91 98765 43210",
+      "planId": "plan-monthly-veg",
+      "planName": "Monthly Saver Thali Plan",
+      "planType": "monthly",
+      "dietaryType": "veg",
+      "mealTypes": [
+        "lunch"
+      ],
+      "startDate": "2026-08-01",
+      "endDate": "2026-08-30",
+      "totalDays": 30,
+      "daysRemaining": 12,
+      "status": "active",
+      "deliveryAddress": {
+        "id": "addr-1",
+        "label": "Home",
+        "street": "Flat 402, Sunshine Residency, 14th Main",
+        "area": "Indiranagar",
+        "city": "Bangalore",
+        "pincode": "560038",
+        "landmark": "Near Metro Station Pillar 104",
+        "isDefault": true
+      },
+      "deliverySlot": "afternoon",
+      "pauseDates": [
+        "2026-08-15",
+        "2026-08-22"
+      ],
+      "amountPaid": 3600,
+      "autoRenew": true,
+      "createdAt": "2026-08-01T09:30:00Z"
+    },
+    {
+      "id": "sub-102",
+      "userId": "usr-2",
+      "customerName": "Priya Mukherjee",
+      "customerPhone": "+91 98220 11223",
+      "planId": "plan-dual-monthly",
+      "planName": "Executive Lunch + Dinner Plan",
+      "planType": "monthly",
+      "dietaryType": "veg",
+      "mealTypes": [
+        "lunch",
+        "dinner"
+      ],
+      "startDate": "2026-08-05",
+      "endDate": "2026-09-04",
+      "totalDays": 30,
+      "daysRemaining": 17,
+      "status": "active",
+      "deliveryAddress": {
+        "id": "addr-priya",
+        "label": "Home",
+        "street": "Flat 101, Green Acres, Koramangala 4th Block",
+        "area": "Koramangala",
+        "city": "Bangalore",
+        "pincode": "560034",
+        "isDefault": true
+      },
+      "deliverySlot": "afternoon",
+      "pauseDates": [],
+      "amountPaid": 6800,
+      "autoRenew": true,
+      "createdAt": "2026-08-05T11:00:00Z"
+    },
+    {
+      "id": "sub-103",
+      "userId": "usr-3",
+      "customerName": "Rohan Deshmukh",
+      "customerPhone": "+91 97112 34455",
+      "planId": "plan-weekly-combo",
+      "planName": "7-Day Weekly Trial Plan",
+      "planType": "weekly",
+      "dietaryType": "non-veg",
+      "mealTypes": [
+        "lunch"
+      ],
+      "startDate": "2026-08-12",
+      "endDate": "2026-08-18",
+      "totalDays": 7,
+      "daysRemaining": 1,
+      "status": "active",
+      "deliveryAddress": {
+        "id": "addr-rohan",
+        "label": "Work",
+        "street": "WeWork Galaxy, 43 Residency Road",
+        "area": "Shanthala Nagar",
+        "city": "Bangalore",
+        "pincode": "560025",
+        "isDefault": true
+      },
+      "deliverySlot": "afternoon",
+      "pauseDates": [
+        "2026-08-14"
+      ],
+      "amountPaid": 950,
+      "autoRenew": false,
+      "createdAt": "2026-08-12T08:00:00Z"
+    },
+    {
+      "id": "sub-104",
+      "userId": "usr-4",
+      "customerName": "Meera Nambiar",
+      "customerPhone": "+91 94441 55667",
+      "planId": "plan-monthly-veg",
+      "planName": "Monthly Saver Thali Plan",
+      "planType": "monthly",
+      "dietaryType": "jain",
+      "mealTypes": [
+        "dinner"
+      ],
+      "startDate": "2026-07-15",
+      "endDate": "2026-08-14",
+      "totalDays": 30,
+      "daysRemaining": 0,
+      "status": "expired",
+      "deliveryAddress": {
+        "id": "addr-meera",
+        "label": "Home",
+        "street": "22/3, 8th Cross, Malleshwaram",
+        "area": "Malleshwaram",
+        "city": "Bangalore",
+        "pincode": "560003",
+        "isDefault": true
+      },
+      "deliverySlot": "evening",
+      "pauseDates": [],
+      "amountPaid": 3600,
+      "autoRenew": false,
+      "createdAt": "2026-07-15T10:00:00Z"
+    },
+    {
+      "id": "sub-105",
+      "userId": "usr-5",
+      "customerName": "Kunal Patel",
+      "customerPhone": "+91 99090 77889",
+      "planId": "plan-monthly-veg",
+      "planName": "Monthly Saver Thali Plan",
+      "planType": "monthly",
+      "dietaryType": "veg",
+      "mealTypes": [
+        "lunch"
+      ],
+      "startDate": "2026-08-10",
+      "endDate": "2026-09-10",
+      "totalDays": 30,
+      "daysRemaining": 22,
+      "status": "paused",
+      "deliveryAddress": {
+        "id": "addr-kunal",
+        "label": "Home",
+        "street": "B-604, Godrej Woodsman Estate",
+        "area": "Hebbal",
+        "city": "Bangalore",
+        "pincode": "560024",
+        "isDefault": true
+      },
+      "deliverySlot": "afternoon",
+      "pauseDates": [
+        "2026-08-16",
+        "2026-08-17",
+        "2026-08-18",
+        "2026-08-19",
+        "2026-08-20"
+      ],
+      "amountPaid": 3600,
+      "autoRenew": true,
+      "createdAt": "2026-08-10T14:20:00Z"
+    }
+  ],
+  "orders": [
+    {
+      "userId": "usr-1",
+      "customerName": "Aarav Sharma",
+      "customerPhone": "+91 98765 43210",
+      "items": [
+        {
+          "menuItemId": "item-lunch",
+          "name": "LUNCH Executive Thali Combo",
+          "mealType": "lunch",
+          "dietaryType": "veg",
+          "quantity": 2,
+          "price": 139
+        }
+      ],
+      "planType": "daily",
+      "selectedMeals": [
+        "lunch"
+      ],
+      "scheduledDate": "2026-08-20",
+      "deliverySlot": "afternoon",
+      "deliveryAddress": {
+        "id": "addr-1",
+        "label": "Home",
+        "street": "Flat 402, Sunshine Residency, 14th Main",
+        "area": "Indiranagar",
+        "city": "Bangalore",
+        "pincode": "560038",
+        "isDefault": true
+      },
+      "status": "preparing",
+      "subtotal": 278,
+      "deliveryFee": 0,
+      "discount": 20,
+      "tax": 14,
+      "totalAmount": 272,
+      "paymentMethod": "upi",
+      "paymentStatus": "paid",
+      "id": "ord-1787138941989",
+      "orderNumber": "HF-2026-9780",
+      "createdAt": "2026-08-19T11:29:01.989Z"
+    },
+    {
+      "id": "ord-8801",
+      "orderNumber": "HF-2026-8801",
+      "userId": "usr-1",
+      "customerName": "Aarav Sharma",
+      "customerPhone": "+91 98765 43210",
+      "items": [
+        {
+          "menuItemId": "menu-1",
+          "name": "Royal North Indian Thali (2 Sabji Combo)",
+          "mealType": "lunch",
+          "dietaryType": "veg",
+          "quantity": 1,
+          "price": 160,
+          "image": "https://images.unsplash.com/photo-1613292443284-8d10ef9383fe?auto=format&fit=crop&w=600&q=80",
+          "sabjiCount": 2,
+          "sabjis": [
+            "Paneer Butter Masala",
+            "Dal Makhani"
+          ],
+          "rotiCount": 3,
+          "rice": "Jeera Rice",
+          "sweet": "Gulab Jamun"
+        }
+      ],
+      "planType": "monthly",
+      "selectedMeals": [
+        "lunch"
+      ],
+      "scheduledDate": "2026-08-18",
+      "deliverySlot": "afternoon",
+      "deliveryAddress": {
+        "id": "addr-1",
+        "label": "Home",
+        "street": "Flat 402, Sunshine Residency, 14th Main",
+        "area": "Indiranagar",
+        "city": "Bangalore",
+        "pincode": "560038",
+        "landmark": "Near Metro Station Pillar 104",
+        "isDefault": true
+      },
+      "status": "out_for_delivery",
+      "subtotal": 160,
+      "deliveryFee": 0,
+      "discount": 20,
+      "tax": 7,
+      "totalAmount": 147,
+      "paymentMethod": "upi",
+      "paymentStatus": "paid",
+      "deliveryBoyId": "rider-1",
+      "deliveryBoyName": "Suresh Kumar",
+      "deliveryBoyPhone": "+91 98800 12345",
+      "specialInstructions": "Ring bell twice, keep sabji medium spicy",
+      "createdAt": "2026-08-18T10:45:00Z",
+      "estimatedDeliveryTime": "01:00 PM",
+      "tiffinDetails": {
+        "sabjiCount": 2,
+        "sabjiNames": [
+          "Paneer Butter Masala",
+          "Dal Makhani"
+        ],
+        "rotiCount": 3,
+        "hasRice": true,
+        "hasSweet": true,
+        "hasSalad": true,
+        "isPacked": true
+      }
+    },
+    {
+      "id": "ord-8802",
+      "orderNumber": "HF-2026-8802",
+      "userId": "usr-2",
+      "customerName": "Priya Mukherjee",
+      "customerPhone": "+91 98220 11223",
+      "items": [
+        {
+          "menuItemId": "menu-3",
+          "name": "High Protein Chicken Bowl Thali (2 Sabji / Curry)",
+          "mealType": "lunch",
+          "dietaryType": "non-veg",
+          "quantity": 2,
+          "price": 195,
+          "image": "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?auto=format&fit=crop&w=600&q=80",
+          "sabjiCount": 2,
+          "sabjis": [
+            "Dhaba Chicken Curry",
+            "Yellow Moong Dal Tadka"
+          ],
+          "rotiCount": 3,
+          "rice": "Brown Rice",
+          "sweet": "Fruit Custard"
+        }
+      ],
+      "planType": "monthly",
+      "selectedMeals": [
+        "lunch"
+      ],
+      "scheduledDate": "2026-08-18",
+      "deliverySlot": "afternoon",
+      "deliveryAddress": {
+        "id": "addr-priya",
+        "label": "Home",
+        "street": "Flat 101, Green Acres, Koramangala 4th Block",
+        "area": "Koramangala",
+        "city": "Bangalore",
+        "pincode": "560034"
+      },
+      "status": "preparing",
+      "subtotal": 390,
+      "deliveryFee": 0,
+      "discount": 50,
+      "tax": 17,
+      "totalAmount": 357,
+      "paymentMethod": "card",
+      "paymentStatus": "paid",
+      "deliveryBoyId": "rider-2",
+      "deliveryBoyName": "Manish Verma",
+      "deliveryBoyPhone": "+91 97700 98765",
+      "specialInstructions": "Extra gravy in chicken curry please",
+      "createdAt": "2026-08-18T11:15:00Z",
+      "estimatedDeliveryTime": "01:15 PM",
+      "tiffinDetails": {
+        "sabjiCount": 2,
+        "sabjiNames": [
+          "Dhaba Chicken Curry",
+          "Yellow Moong Dal Tadka"
+        ],
+        "rotiCount": 6,
+        "hasRice": true,
+        "hasSweet": true,
+        "hasSalad": true,
+        "isPacked": false
+      }
+    },
+    {
+      "id": "ord-8803",
+      "orderNumber": "HF-2026-8803",
+      "userId": "usr-3",
+      "customerName": "Rohan Deshmukh",
+      "customerPhone": "+91 97112 34455",
+      "items": [
+        {
+          "menuItemId": "menu-5",
+          "name": "Single Sabji Executive Meal (Homestyle Aloo Gobi)",
+          "mealType": "breakfast",
+          "dietaryType": "veg",
+          "quantity": 1,
+          "price": 90,
+          "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=600&q=80",
+          "sabjiCount": 1,
+          "sabjis": [
+            "Homestyle Aloo Gobi"
+          ],
+          "rotiCount": 4,
+          "rice": "Steamed Rice",
+          "sweet": "None"
+        }
+      ],
+      "planType": "daily",
+      "selectedMeals": [
+        "breakfast"
+      ],
+      "scheduledDate": "2026-08-18",
+      "deliverySlot": "morning",
+      "deliveryAddress": {
+        "id": "addr-rohan",
+        "label": "Work",
+        "street": "WeWork Galaxy, 43 Residency Road",
+        "area": "Shanthala Nagar",
+        "city": "Bangalore",
+        "pincode": "560025"
+      },
+      "status": "delivered",
+      "subtotal": 90,
+      "deliveryFee": 20,
+      "discount": 0,
+      "tax": 5.5,
+      "totalAmount": 115.5,
+      "paymentMethod": "upi",
+      "paymentStatus": "paid",
+      "deliveryBoyId": "rider-1",
+      "deliveryBoyName": "Suresh Kumar",
+      "deliveryBoyPhone": "+91 98800 12345",
+      "createdAt": "2026-08-18T07:15:00Z",
+      "deliveredAt": "2026-08-18T08:25:00Z",
+      "tiffinDetails": {
+        "sabjiCount": 1,
+        "sabjiNames": [
+          "Homestyle Aloo Gobi"
+        ],
+        "rotiCount": 4,
+        "hasRice": true,
+        "hasSweet": false,
+        "hasSalad": true,
+        "isPacked": true
+      }
+    },
+    {
+      "id": "ord-8804",
+      "orderNumber": "HF-2026-8804",
+      "userId": "usr-5",
+      "customerName": "Kunal Patel",
+      "customerPhone": "+91 99090 77889",
+      "items": [
+        {
+          "menuItemId": "menu-7",
+          "name": "Single Sabji Bhindi Masala + Phulka Box",
+          "mealType": "lunch",
+          "dietaryType": "veg",
+          "quantity": 1,
+          "price": 130,
+          "image": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80",
+          "sabjiCount": 1,
+          "sabjis": [
+            "Crispy Bhindi Masala"
+          ],
+          "rotiCount": 4,
+          "rice": "None",
+          "sweet": "Moong Dal Halwa"
+        }
+      ],
+      "planType": "weekly",
+      "selectedMeals": [
+        "lunch"
+      ],
+      "scheduledDate": "2026-08-18",
+      "deliverySlot": "afternoon",
+      "deliveryAddress": {
+        "id": "addr-kunal",
+        "label": "Home",
+        "street": "B-604, Godrej Woodsman Estate",
+        "area": "Hebbal",
+        "city": "Bangalore",
+        "pincode": "560024"
+      },
+      "status": "preparing",
+      "subtotal": 130,
+      "deliveryFee": 0,
+      "discount": 0,
+      "tax": 6.5,
+      "totalAmount": 136.5,
+      "paymentMethod": "cod",
+      "paymentStatus": "pending",
+      "deliveryBoyId": "rider-4",
+      "deliveryBoyName": "Deepak Patel",
+      "deliveryBoyPhone": "+91 95511 88990",
+      "specialInstructions": "Pending cash payment at doorstep ₹136.5",
+      "createdAt": "2026-08-18T10:15:00Z",
+      "estimatedDeliveryTime": "01:30 PM",
+      "tiffinDetails": {
+        "sabjiCount": 1,
+        "sabjiNames": [
+          "Crispy Bhindi Masala"
+        ],
+        "rotiCount": 4,
+        "hasRice": false,
+        "hasSweet": true,
+        "hasSalad": true,
+        "isPacked": false
+      }
+    },
+    {
+      "id": "ord-8805",
+      "orderNumber": "HF-2026-8805",
+      "userId": "usr-6",
+      "customerName": "Ananya Iyer",
+      "customerPhone": "+91 98450 67890",
+      "items": [
+        {
+          "menuItemId": "menu-4",
+          "name": "Jain Satvik Special Thali (2 Sabji Combo)",
+          "mealType": "dinner",
+          "dietaryType": "jain",
+          "quantity": 1,
+          "price": 155,
+          "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=80",
+          "sabjiCount": 2,
+          "sabjis": [
+            "Jain Kadai Paneer",
+            "Gujarati Kadhi"
+          ],
+          "rotiCount": 3,
+          "rice": "Jeera Rice",
+          "sweet": "Rice Kheer"
+        }
+      ],
+      "planType": "daily",
+      "selectedMeals": [
+        "dinner"
+      ],
+      "scheduledDate": "2026-08-18",
+      "deliverySlot": "evening",
+      "deliveryAddress": {
+        "id": "addr-ananya",
+        "label": "Home",
+        "street": "78, 11th Main, Jayanagar 4th T Block",
+        "area": "Jayanagar",
+        "city": "Bangalore",
+        "pincode": "560041"
+      },
+      "status": "placed",
+      "subtotal": 155,
+      "deliveryFee": 0,
+      "discount": 0,
+      "tax": 7.75,
+      "totalAmount": 162.75,
+      "paymentMethod": "cod",
+      "paymentStatus": "pending",
+      "createdAt": "2026-08-18T16:10:00Z",
+      "estimatedDeliveryTime": "08:00 PM",
+      "tiffinDetails": {
+        "sabjiCount": 2,
+        "sabjiNames": [
+          "Jain Kadai Paneer",
+          "Gujarati Sweet Kadhi"
+        ],
+        "rotiCount": 3,
+        "hasRice": true,
+        "hasSweet": true,
+        "hasSalad": true,
+        "isPacked": false
+      }
+    }
+  ],
+  "riders": [
+    {
+      "id": "rider-1",
+      "name": "Suresh Kumar",
+      "phone": "+91 98800 12345",
+      "vehicleNumber": "KA 03 HM 4521",
+      "vehicleType": "Bike",
+      "status": "busy",
+      "assignedArea": "Indiranagar / Domlur",
+      "currentOrdersCount": 4,
+      "rating": 4.9,
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80"
+    },
+    {
+      "id": "rider-2",
+      "name": "Manish Verma",
+      "phone": "+91 97700 98765",
+      "vehicleNumber": "KA 01 EK 8812",
+      "vehicleType": "Scooter",
+      "status": "busy",
+      "assignedArea": "Koramangala / HSR Layout",
+      "currentOrdersCount": 6,
+      "rating": 4.8,
+      "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80"
+    },
+    {
+      "id": "rider-3",
+      "name": "Ganesh Naik",
+      "phone": "+91 96633 44556",
+      "vehicleNumber": "KA 05 TJ 3390",
+      "vehicleType": "Bike",
+      "status": "active",
+      "assignedArea": "Whitefield / Bellandur",
+      "currentOrdersCount": 2,
+      "rating": 4.95,
+      "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&q=80"
+    },
+    {
+      "id": "rider-4",
+      "name": "Deepak Patel",
+      "phone": "+91 95511 88990",
+      "vehicleNumber": "KA 04 MP 1145",
+      "vehicleType": "Van",
+      "status": "active",
+      "assignedArea": "Hebbal / Yelahanka (Bulk Route)",
+      "currentOrdersCount": 8,
+      "rating": 4.75,
+      "avatar": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=150&q=80"
+    }
+  ],
+  "transactions": [
+    {
+      "id": "tx-1787138941989",
+      "transactionId": "TXN_ORD_38941989",
+      "orderOrSubId": "ord-1787138941989",
+      "type": "order",
+      "customerName": "Aarav Sharma",
+      "customerPhone": "+91 98765 43210",
+      "amount": 272,
+      "paymentMethod": "upi",
+      "status": "paid",
+      "date": "2026-08-19T11:29:01.989Z",
+      "invoiceUrl": "/invoices/INV-HF-2026-9780.pdf"
+    },
+    {
+      "id": "tx-501",
+      "transactionId": "TXN_UPI_982341908",
+      "orderOrSubId": "sub-101",
+      "type": "subscription",
+      "customerName": "Aarav Sharma",
+      "customerPhone": "+91 98765 43210",
+      "amount": 3600,
+      "paymentMethod": "upi",
+      "status": "paid",
+      "date": "2026-08-01T09:32:00Z",
+      "invoiceUrl": "/invoices/INV-2026-08-101.pdf"
+    },
+    {
+      "id": "tx-502",
+      "transactionId": "TXN_CARD_119023441",
+      "orderOrSubId": "sub-102",
+      "type": "subscription",
+      "customerName": "Priya Mukherjee",
+      "customerPhone": "+91 98220 11223",
+      "amount": 6800,
+      "paymentMethod": "card",
+      "status": "paid",
+      "date": "2026-08-05T11:02:00Z",
+      "invoiceUrl": "/invoices/INV-2026-08-102.pdf"
+    },
+    {
+      "id": "tx-503",
+      "transactionId": "TXN_UPI_771890231",
+      "orderOrSubId": "ord-8801",
+      "type": "order",
+      "customerName": "Aarav Sharma",
+      "customerPhone": "+91 98765 43210",
+      "amount": 147,
+      "paymentMethod": "upi",
+      "status": "paid",
+      "date": "2026-08-18T10:46:00Z",
+      "invoiceUrl": "/invoices/INV-ORD-8801.pdf"
+    },
+    {
+      "id": "tx-504",
+      "transactionId": "TXN_CARD_449018239",
+      "orderOrSubId": "ord-8802",
+      "type": "order",
+      "customerName": "Priya Mukherjee",
+      "customerPhone": "+91 98220 11223",
+      "amount": 357,
+      "paymentMethod": "card",
+      "status": "paid",
+      "date": "2026-08-18T11:16:00Z",
+      "invoiceUrl": "/invoices/INV-ORD-8802.pdf"
+    },
+    {
+      "id": "tx-505",
+      "transactionId": "TXN_COD_8805_PENDING",
+      "orderOrSubId": "ord-8805",
+      "type": "order",
+      "customerName": "Ananya Iyer",
+      "customerPhone": "+91 98450 67890",
+      "amount": 162.75,
+      "paymentMethod": "cod",
+      "status": "pending",
+      "date": "2026-08-18T16:10:00Z"
+    }
+  ],
+  "expenses": [
+    {
+      "id": "exp-1",
+      "title": "Organic Vegetables & Fresh Greens Supply",
+      "category": "groceries",
+      "amount": 4850,
+      "date": "2026-08-18",
+      "paidTo": "Bangalore Fresh Veggies Mandi Wholesale",
+      "paymentMethod": "upi",
+      "notes": "Tomatoes 40kg, Onions 50kg, Paneer 15kg, Green chillies, Coriander",
+      "receiptNumber": "REC-2026-441"
+    },
+    {
+      "id": "exp-2",
+      "title": "Food Grade Insulated 5-Compartment Meal Trays",
+      "category": "packaging",
+      "amount": 3200,
+      "date": "2026-08-17",
+      "paidTo": "EcoPack India Ltd",
+      "paymentMethod": "netbanking",
+      "notes": "500 Units microwave-safe spill-proof meal boxes",
+      "receiptNumber": "REC-2026-439"
+    },
+    {
+      "id": "exp-3",
+      "title": "Commercial LPG Cylinder Refills (3x 19kg)",
+      "category": "utilities",
+      "amount": 5400,
+      "date": "2026-08-16",
+      "paidTo": "Indane Commercial Gas Agency",
+      "paymentMethod": "card",
+      "notes": "Kitchen station 1, 2 and steam boiler",
+      "receiptNumber": "REC-2026-430"
+    },
+    {
+      "id": "exp-4",
+      "title": "Rider Fuel & Distance Allowance - Week 2",
+      "category": "logistics",
+      "amount": 4200,
+      "date": "2026-08-15",
+      "paidTo": "Fleet Riders Team (4 riders)",
+      "paymentMethod": "upi",
+      "notes": "Weekly reimbursement for 640km combined deliveries",
+      "receiptNumber": "REC-2026-425"
+    },
+    {
+      "id": "exp-5",
+      "title": "Head Chef & Kitchen Assistant Wages Advance",
+      "category": "salaries",
+      "amount": 15000,
+      "date": "2026-08-10",
+      "paidTo": "Kitchen Staff Pool",
+      "paymentMethod": "netbanking",
+      "notes": "Mid-month operational wage disbursement",
+      "receiptNumber": "REC-2026-410"
+    }
+  ],
+  "inventory": [
+    {
+      "id": "inv-1",
+      "name": "Premium Basmati Rice (Daawat Gold)",
+      "category": "Grains & Pulses",
+      "currentStock": 120,
+      "unit": "kg",
+      "minThreshold": 30,
+      "pricePerUnit": 95,
+      "lastRestocked": "2026-08-14",
+      "supplier": "Metro Cash & Carry",
+      "status": "in_stock"
+    },
+    {
+      "id": "inv-2",
+      "name": "Farm Fresh Malai Paneer",
+      "category": "Dairy & Oil",
+      "currentStock": 8,
+      "unit": "kg",
+      "minThreshold": 15,
+      "pricePerUnit": 340,
+      "lastRestocked": "2026-08-17",
+      "supplier": "Nandini Dairy Wholesale",
+      "status": "low_stock"
+    },
+    {
+      "id": "inv-3",
+      "name": "Sharbati Whole Wheat Atta",
+      "category": "Grains & Pulses",
+      "currentStock": 85,
+      "unit": "kg",
+      "minThreshold": 25,
+      "pricePerUnit": 48,
+      "lastRestocked": "2026-08-15",
+      "supplier": "Aashirvaad Mill Supply",
+      "status": "in_stock"
+    },
+    {
+      "id": "inv-4",
+      "name": "Pure Desi Cow Ghee",
+      "category": "Dairy & Oil",
+      "currentStock": 18,
+      "unit": "liters",
+      "minThreshold": 10,
+      "pricePerUnit": 580,
+      "lastRestocked": "2026-08-12",
+      "supplier": "Amul Depot",
+      "status": "in_stock"
+    },
+    {
+      "id": "inv-5",
+      "name": "Unpolished Toor Dal",
+      "category": "Grains & Pulses",
+      "currentStock": 40,
+      "unit": "kg",
+      "minThreshold": 15,
+      "pricePerUnit": 145,
+      "lastRestocked": "2026-08-10",
+      "supplier": "Metro Cash & Carry",
+      "status": "in_stock"
+    },
+    {
+      "id": "inv-6",
+      "name": "Insulated 5-Compartment Meal Boxes",
+      "category": "Packaging",
+      "currentStock": 45,
+      "unit": "boxes",
+      "minThreshold": 100,
+      "pricePerUnit": 8.5,
+      "lastRestocked": "2026-08-08",
+      "supplier": "EcoPack India Ltd",
+      "status": "low_stock"
+    },
+    {
+      "id": "inv-7",
+      "name": "Commercial LPG Cylinder (19kg)",
+      "category": "Gas & Cleaning",
+      "currentStock": 1,
+      "unit": "cylinders",
+      "minThreshold": 2,
+      "pricePerUnit": 1800,
+      "lastRestocked": "2026-08-16",
+      "supplier": "Indane Commercial Gas",
+      "status": "low_stock"
+    }
+  ],
+  "settings": {
+    "businessName": "Homly Food Tiffin Services",
+    "tagline": "Ghar Jaisa Swad, Roz Aapke Dwar",
+    "fssaiNumber": "11223344556677",
+    "gstNumber": "29ABCDE1234F1Z5",
+    "contactEmail": "support@homlyfood.com",
+    "contactPhone": "+91 80 4567 8900",
+    "address": "No 45, 1st Cross, Indiranagar 100ft Road, Bangalore - 560038",
+    "currency": "₹",
+    "breakfastCutoff": "07:30 AM",
+    "lunchCutoff": "10:30 AM",
+    "dinnerCutoff": "05:30 PM",
+    "pauseDeadlineHours": 12,
+    "deliverySlots": {
+      "morning": "07:30 AM - 09:00 AM",
+      "afternoon": "12:15 PM - 01:45 PM",
+      "evening": "07:30 PM - 09:00 PM"
+    },
+    "taxPercentage": 5,
+    "deliveryFee": 25,
+    "freeDeliveryThreshold": 200
+  },
+  "reviews": [
+    {
+      "id": "rev-1",
+      "customerName": "Sneha Kulkarni",
+      "rating": 5,
+      "date": "2026-08-17",
+      "comment": "Homly Food is an absolute lifesaver! The Paneer Thali tasted just like home cooked food—not oily or heavy. The delivery at 12:45 PM is always on time.",
+      "mealName": "Royal North Indian Thali",
+      "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80",
+      "foodRating": 5,
+      "deliveryRating": 5,
+      "packagingRating": 5
+    },
+    {
+      "id": "rev-2",
+      "customerName": "Vikramaditya Rao",
+      "rating": 5,
+      "date": "2026-08-16",
+      "comment": "Been subscribed to the Monthly Plan for 3 months now. The ability to pause deliveries when I travel for work without losing credits is unbeatable!",
+      "mealName": "Monthly Saver Thali Plan",
+      "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=150&q=80",
+      "foodRating": 5,
+      "deliveryRating": 5,
+      "packagingRating": 4.8
+    },
+    {
+      "id": "rev-3",
+      "customerName": "Divya & Siddharth",
+      "rating": 5,
+      "date": "2026-08-15",
+      "comment": "The High Protein Chicken bowl has 38g protein and tastes delicious! Perfectly balanced spices and warm rotis. 10/10 recommend.",
+      "mealName": "High Protein Chicken Bowl Thali",
+      "avatar": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=150&q=80",
+      "foodRating": 5,
+      "deliveryRating": 4.9,
+      "packagingRating": 5
+    }
+  ]
+}

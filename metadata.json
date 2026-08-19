@@ -1,0 +1,6 @@
+{
+  "name": "Tiffin CRM & Customer App",
+  "description": "Production-ready Tiffin Meal Delivery & CRM System featuring customer ordering, subscription management, pause delivery, kitchen inventory, dispatch routes, and enterprise admin analytics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
